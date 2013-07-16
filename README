@@ -1,0 +1,12 @@
+/groups/index.php
+
+Adds "Create groups from child courses" button to child course's group page
+to make it possible to create groups from students enrolled into the parent metacourses
+
+e.g. child course:  Unit 02: Computer Systems (T)  http://moodle2:1234/course/view.php?id=3600
+									  group page:  http://moodle2:1234/group/index.php?id=3600
+						  parent /meta courses/ :  BTEC L3 Diploma in IT Yr1 GpA (Tutorial ...)  and smae for GpB
+						                           BTEC L3 Extended Diploma in IT Yr1 (Tutorial ....)
+		                       parent categories:  http://moodle2:1234/course/index.php?categoryid=18
+
+------
