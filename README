@@ -10,3 +10,18 @@ e.g. child course:  Unit 02: Computer Systems (T)  http://moodle2:1234/course/vi
 		                       parent categories:  http://moodle2:1234/course/index.php?categoryid=18
 
 ------
+
+/auth/ldap/auth.php
+
+Adds a new function "logoutpage_hook()" to the auth_plugin_ldap class /the last function of the file/
+which prevents the user to be get logged back in when he logs out in case sso /single sign on/ is enabled.
+So it makes possible to log out and log in as a different user when sso is enabled.
+
+------
+
+/enrol/database/ebs-enrol-test.php
+
+Tests the database connection to ebs and lists the content of the FES.MOODLE_CURRENT_ENROLMENTS table
+which holds the enrolments that needs to be imported automatically into moodle by the Moodle Enrolments Sync
+scheduled task. It also holds the information for the automatic new course creation into the Created Courses 
+category done by the same scheduled task.
