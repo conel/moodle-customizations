@@ -25,3 +25,15 @@ Tests the database connection to ebs and lists the content of the FES.MOODLE_CUR
 which holds the enrolments that needs to be imported automatically into moodle by the Moodle Enrolments Sync
 scheduled task. It also holds the information for the automatic new course creation into the Created Courses 
 category done by the same scheduled task.
+
+------
+
+/my
+
+Two separate "My moodle" page for students and staff.
+Notes: 
+1, For the conel moodle, on the Site administration -> Appearance -> Navigation page 
+the "Default Home page for users" is set to 'My Moodle' to make this redirection working 
+automatically when the users log in.
+2, If the user's email ends with @student.conel.ac.uk then it redirects to the 
+student's my moodle page, in any other case to the staff's my moodle page.
