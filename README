@@ -37,3 +37,5 @@ the "Default Home page for users" is set to 'My Moodle' to make this redirection
 automatically when the users log in.
 2, If the user's email ends with @student.conel.ac.uk then it redirects to the 
 student's my moodle page, in any other case to the staff's my moodle page.
+
+------
