@@ -171,7 +171,38 @@ echo $OUTPUT->header();
 
 ?>
 
-<iframe src="http://ldmis-app/ProPortal" style="width:100%;height:1400px"></iframe>	
+<h2>News</h2>
+
+<?php if ($banners_exist === true) { ?>
+
+<div class="container">
+    <div class="wt-rotator">
+        <div class="screen"><noscript><img src="<?php echo $banners_found[0]['img_url']; ?>" alt="" /></noscript></div>
+        <div class="c-panel">
+            <div class="buttons"><div class="prev-btn"></div><div class="play-btn"></div><div class="next-btn"></div></div>
+            <div class="thumbnails">
+                <ul>
+                <?php foreach ($banners_found as $ban) {
+                    echo '<li><a href="'.$ban['img_url'].'"><img src="'.$ban['img_url'].'" alt="Banner" width="495" height="185" /></a><a href="'.$ban['link'].'"></a></li>' . PHP_EOL;
+                } ?>
+                </ul>
+            </div>     
+        </div><!-- // c-panel -->
+    </div><!-- // wt-rotator -->
+</div><!-- // container -->
+
+<?php 
+} else {
+    echo '<p>No banners have been added yet.</p>';
+}
+if (has_capability('moodle/site:config', get_context_instance(CONTEXT_SYSTEM))) {
+    echo '<p style="text-align:right;"><a href="/theme/conel/banners/index.php?audience=2">Edit '.$audience_name.' Banners</a></p>';
+}
+?>
+ 
+<br />
+
+<!--iframe src="http://ldmis-app/ProPortal" style="width:100%;height:1400px"></iframe-->	
 
 <?php
 			
