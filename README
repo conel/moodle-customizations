@@ -39,3 +39,9 @@ automatically when the users log in.
 student's my moodle page, in any other case to the staff's my moodle page.
 
 ------
+
+/admin/cli/reset-semafor.php
+
+Clean running status of automated backup i
+if it execution was interrupted
+(for example using ctrl + c from command line)
